@@ -1,17 +1,19 @@
 package ie.atu.oop.week1;
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.HashSet;
+import java.util.Scanner;
+// using Scanner to read the inputs
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+
+        Scanner scanner= new Scanner(System.in);
+        System.out.println("Enter the workshsop name");
+        String name1= scanner.nextLine();
+        System.out.println("Enter the  workshop capacity");
+        int capacity1= scanner.nextInt();
+        System.out.println("Workshop Created");
+        Workshop workshop1= new Workshop(name1, capacity1);// creatted and object
+        System.out.println(workshop1.getname()+ " - Capacity: " + workshop1.getcapacity());// printinng out the created object
+        scanner.close();
     }
 }
